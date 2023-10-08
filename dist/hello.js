@@ -4,7 +4,6 @@ const getMeme = () => {
     fetch('https://meme-api.com/gimme')
         .then((res) => res.json())
         .then((data) => {
-        console.log(data);
         card.innerHTML = `
             <img src="${data.url}" alt="">
             <p>${data.title}</p>
